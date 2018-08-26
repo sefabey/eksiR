@@ -1,8 +1,11 @@
 Package: eksiR
-Title: What the Package Does (one line, title case)
+Title: Scrape Data from eksisozluk.com
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Author: person("Sefa", "Ozalp", email = "ozalpas [at] cardiff.ac.uk", role = c("aut", "cre"))
+Description: A webscraper for eksisozluk.com (sour dictionary) which is
+    one of the top 20 sites in Turkey (https://www.alexa.com/topsites/countries/TR).
+    It allows you to scrape data by entry number and returns a neat tibble. It
+    also returns informative errors for deleted entries.
 Depends: R (>= 3.4.4)
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -12,3 +15,4 @@ Suggests: covr,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+RoxygenNote: 6.1.0
