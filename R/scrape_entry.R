@@ -26,7 +26,8 @@ scrape_entry <- function(entry_id, user_agent=curl_user_agent, export_csv=FALSE,
       favourite_count =NA,
       title_text=NA,
       title_id=NA,
-      title_slug=NA)
+      title_slug=NA,
+      error_message=query[1])
   } else {
     get_column <- function(x) {query %>%
         rvest::html_node(xpath = x) %>%
@@ -41,7 +42,8 @@ scrape_entry <- function(entry_id, user_agent=curl_user_agent, export_csv=FALSE,
       favourite_count = get_column('//*[@id="entry-item-list"]/li//@data-favorite-count'),
       title_text=get_column('//h1[@id="title"]'),
       title_id= get_column('//h1[@id="title"]//@data-id'),
-      title_slug= get_column('//h1[@id="title"]//@data-slug'))
+      title_slug= get_column('//h1[@id="title"]//@data-slug'),
+      error_message=NA)
   }
   if (export_csv==TRUE) {
     readr::write_csv(entry, path = glue::glue(getwd(),"/eksi_entry_no_",entry_id , ".csv"))
