@@ -3,7 +3,7 @@
 ## Installation
 
 ```{r}
-devtools::install_github("sefabey/eksiR")
+devtools::install_github("sefabey/eksiR",force=T)
 library(eksiR)
 ```
 
@@ -14,29 +14,39 @@ The goal of this package is to make scraping data from eksisozluk.com easier in 
 You can scrape entries by providing entry IDs:
 
 ```{r}
-eksiR::scrape_entry(1789751)
+eksiR::eksi_scrape_entry(1789751)
 ```
 
 You can also export scraped entries into a .csv file:
 ```{r}
-eksiR::scrape_entry(1789751,export_csv = T)
+eksiR::eksi_scrape_entry(1789751,export_csv = T)
 ```
 
 If you would like to scrape multiple entries and return a neat tibble:
 
 ```{r}
 entry_ids <- 1:20
-purrr::map_df(entry_ids, scrape_entry)
+purrr::map_df(entry_ids, eksi_scrape_entry)
 ```
 
 As default, removed/deleted entries are retained. If you want to remove them use:
 
-If you would like to scrape multiple entries and return a neat tibble:
-
 ```{r}
 entry_ids <- 1:20
-purrr::map_df(entry_ids, scrape_entry) %>% 
+purrr::map_df(entry_ids, eksi_scrape_entry) %>% 
   na.omit()
+```
+
+You can also scrape topics:
+```{r}
+eksi_scrape_topic("https://eksisozluk.com/tayyip-erdogan-fatih-sarac-ses-kaydi--4224837")
+eksi_scrape_topic("https://eksisozluk.com/tayyip-erdogan-fatih-sarac-ses-kaydi--4224837",export_csv = T)
+```
+
+You can also use utility functions to parse eksisozluk specific date/time objects. This function adds two extra columns to tibbles, namely `original_date_time` and `edited_date_time`
+```{r}
+eksi_scrape_topic("https://eksisozluk.com/tayyip-erdogan-fatih-sarac-ses-kaydi--4224837") %>% 
+  eksi_date_time_parse()
 ```
 
 
