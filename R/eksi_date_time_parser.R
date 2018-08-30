@@ -15,7 +15,7 @@ eksi_date_time_parse <- function(x){
     mutate(edited_date_time= case_when(
       nchar(edited_date_time)<6 ~ paste0(str_sub(date_time,1,11),edited_date_time),
       TRUE ~ edited_date_time)) %>% # kudos to tidyverse authors that made this possible
-    mutate_at(vars(contains("_date_time")),lubridate::dmy_hm, tz="Europe/Istanbul")
+    mutate_at(vars(contains("_date_time")),lubridate::dmy_hm)
 }
 
 #' Convert data_time column into POSIXct (Legacy)
@@ -37,7 +37,7 @@ eksi_date_time_parse_legacy <- function(x){
     mutate(edited_date_time= case_when(
       nchar(edited_date_time)<6 ~ paste0(str_sub(date_time,1,11),edited_date_time),
       TRUE ~ edited_date_time)) %>% # kudos to tidyverse authors that made this possible
-    mutate_at(vars(contains("_date_time")),lubridate::dmy_hm, tz="Europe/Istanbul")
+    mutate_at(vars(contains("_date_time")),lubridate::dmy_hm)
 }
 
 # Tests

@@ -16,6 +16,7 @@
 #' @import xml2
 #' @import curl
 #' @import parallel
+#' @import stringr
 #' @docType package
 NULL
 

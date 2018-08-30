@@ -4,8 +4,9 @@ Version: 0.0.0.9000
 Author: person("Sefa", "Ozalp", email = "ozalpas [at] cardiff.ac.uk", role = c("aut", "cre"))
 Description: A webscraper for eksisozluk.com (sour dictionary) which is
     one of the top 20 sites in Turkey (https://www.alexa.com/topsites/countries/TR).
-    It allows you to scrape data by entry number and returns a neat tibble. It
-    also returns informative errors for deleted entries.
+    It allows you to scrape data by entry number or topic URL and returns a neat tibble.
+    The former method returns informative errors for deleted/removed entries. eksiR also allows for
+    correct parsing data/time values scraped from eksisozluk.
 Depends: R (>= 3.4.4)
 License: MIT + file LICENSE
 Encoding: UTF-8

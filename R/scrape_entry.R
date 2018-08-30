@@ -11,7 +11,7 @@
 #'
 #' @examples scrape_entry(1)
 #' @examples scrape_entry(1, export_csv=TRUE)
-scrape_entry <- function(entry_id, user_agent=curl_user_agent, export_csv=FALSE, sleep_time=0.05) {
+eksi_scrape_entry <- function(entry_id, user_agent=curl_user_agent, export_csv=FALSE, sleep_time=0.05) {
   Sys.sleep(sleep_time) # sleep briefly to not overwhelm servers of the website when scraping at scale
   main_url <- paste0("https://eksisozluk.com/entry/",entry_id)
   query <- try(xml2::read_html(curl::curl(main_url, handle = curl::new_handle("useragent"= curl_user_agent)), encoding = 'UTF-8'),silent = F)
