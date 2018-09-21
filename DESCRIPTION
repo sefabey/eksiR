@@ -23,7 +23,10 @@ Imports:
     glue,
     purrr,
     readr,
-    magrittr
+    magrittr,
+    stringr,
+    curl,
+    parallel
 Suggests: covr,
     testthat,
     knitr,
