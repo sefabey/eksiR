@@ -9,6 +9,8 @@ Description: A webscraper for eksisozluk.com (sour dictionary) which is
     It allows you to scrape data by entry number or topic URL and returns a neat tibble.
     The former method returns informative errors for deleted/removed entries. eksiR also allows for
     correct parsing data/time values scraped from eksisozluk.
+Author: Sefa Ozalp [aut, cre]
+Maintainer: Sefa Ozalp <ozalpas@cardiff.ac.uk>    
 Depends: R (>= 3.4.4)
 License: MIT + file LICENSE
 Encoding: UTF-8
