@@ -18,7 +18,8 @@ Imports:
     xml2,
     glue,
     purrr,
-    xml2
+    readr,
+    magrittr
 Suggests: covr,
     testthat,
     knitr,
