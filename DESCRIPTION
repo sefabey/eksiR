@@ -11,6 +11,14 @@ Depends: R (>= 3.4.4)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports:
+    dplyr,
+    rvest, 
+    tibble,
+    xml2,
+    glue,
+    purrr,
+    xml2
 Suggests: covr,
     testthat,
     knitr,
