@@ -5,7 +5,7 @@
 #' @return A tibble. Adds two new columns (POSIXct type) to the existing tibble called original_date_time and edited_date_time. The latter is only for edited entries. Otherwise, fills NA.
 #' @export
 #'
-#' @examples scrape_entry(3000010) %>% eksi_date_time_parse()
+#' @examples \dontrun{scrape_entry(3000010) %>% eksi_date_time_parse())}
 eksi_date_time_parse <- function(x){
   x %>%
     mutate(original_date_time = NA) %>%

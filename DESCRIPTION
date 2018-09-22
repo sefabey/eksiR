@@ -2,7 +2,7 @@ Package: eksiR
 Title: Scrape Data from eksisozluk.com
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Sefa", "Ozalp", email = "ozalpas [at] cardiff.ac.uk", role = c("aut", "cre"))
+    person("Sefa", "Ozalp", email = "ozalpas@cardiff.ac.uk", role = c("aut", "cre"))
     )
 Description: A webscraper for eksisozluk.com (sour dictionary) which is
     one of the top 20 sites in Turkey (https://www.alexa.com/topsites/countries/TR).
