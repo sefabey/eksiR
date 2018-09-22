@@ -17,6 +17,7 @@
 #' @import curl
 #' @import parallel
 #' @import stringr
+#' @import tidyverse
 #' @docType package
 NULL
 

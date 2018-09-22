@@ -26,7 +26,8 @@ Imports:
     magrittr,
     stringr,
     curl,
-    parallel
+    parallel,
+    tidyverse
 Suggests: covr,
     testthat,
     knitr,
